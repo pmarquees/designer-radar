@@ -5,16 +5,14 @@ const stringify = require('virtual-dom-stringify')
 
 const chart = radar({
 	// columns
-	price: 'Price',
-	useful: 'Usefulness',
-	design: 'Design',
-	battery: 'Battery Capacity',
-	camera: 'Camera Quality'
+	ui: 'UI Design',
+	interaction: 'Interaction',
+	strategy: 'Strategy',
+	research: 'Research',
+	leadership: 'Leadership'
 }, [
 	// data
-	{class: 'iphone', price:  1, battery: .7, design:  1, useful: .9, camera: .9},
-	{class: 'galaxy', price: .8, battery:  1, design: .6, useful: .8, camera:  1},
-	{class: 'nexus',  price: .5, battery: .8, design: .7, useful: .6, camera: .6}
+	{class: 'iphone', ui: .4, research: .7, strategy: 1, interaction: .9, leadership: .9},
 ], {
 	shapeProps: (data) => ({className: 'shape ' + data.class})
 })
@@ -37,9 +35,7 @@ process.stdout.write(`
 		}
 		.shape:hover { fill-opacity: .6; }
 
-		.shape.iphone { fill: #edc951; stroke: #edc951; }
-		.shape.nexus  { fill: #cc333f; stroke: #cc333f; }
-		.shape.galaxy { fill: #00a0b0; stroke: #00a0b0; }
+		.shape.iphone { fill: #0066FF; stroke: #0066FF; }
 	</style>
 	${stringify(chart)}
 </svg>
