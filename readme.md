@@ -1,4 +1,4 @@
-# [svg-radar-chart](https://derhuerst.github.io/svg-radar-chart/)
+# Forked from [svg-radar-chart](https://derhuerst.github.io/svg-radar-chart/)
 
 **Generate SVG radar charts.**
 
